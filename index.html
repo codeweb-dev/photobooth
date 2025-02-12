@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LumiBooth: Capture, Create, Cherish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div
+      id="transition-overlay"
+      class="fixed inset-0 bg-black z-50 transition-transform transform duration-1000"
+    >
+      <div
+        class="flex h-screen items-center justify-center w-full text-2xl md:text-5xl font-bold text-center text-white"
+      >
+        <div class="flex flex-col items-center justify-center gap-10">
+          <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+          </div>
+          <p class="text-sm">
+            Please wait a moment. If you are stuck for long, please reload.
+          </p>
+        </div>
+      </div>
+    </div>
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <i class="fa-solid fa-camera-retro text-3xl"></i>
+        </div>
+        <div class="flex items-center gap-3 md:gap-6">
+          <a
+            href="https://codeweb-dev.github.io/portfolio/"
+            target="_blank"
+            class="text-sm/6 font-semibold text-gray-900"
+            >Portfolio</a
+          >
+          <a href="donation.html" class="text-sm/6 font-semibold text-gray-900"
+            >Donation</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="h-screen flex flex-col items-center justify-center w-full">
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-2xl py-32 lg:py-32">
+          <div class="text-center">
+            <h1
+              class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl"
+            >
+              Capture, Create, Cherish with LumiBooth
+            </h1>
+            <p class="mt-3 text-sm text-gray-400">
+              Turn moments into memories with LumiBooth. Snap, style, and save
+              your perfect shots effortlessly.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="photobooth.html"
+                class="rounded-full py-2 px-6 font-bold bg-black text-white"
+                >Get started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

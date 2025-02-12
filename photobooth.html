@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LumiBooth: Capture, Create, Cherish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div
+      id="transition-overlay"
+      class="fixed inset-0 bg-black z-50 transition-transform transform duration-1000"
+    >
+      <div
+        class="flex h-screen items-center justify-center w-full text-2xl md:text-5xl font-bold text-center text-white"
+      >
+        <div class="flex flex-col items-center justify-center gap-10">
+          <div class="wrapper">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+          </div>
+          <p class="text-sm">
+            Please wait a moment. If you are stuck for long, please reload.
+          </p>
+        </div>
+      </div>
+    </div>
+    <main class="h-screen flex flex-col items-center justify-center w-full">
+      <div class="flex flex-col items-center w-full">
+        <div class="h-screen w-full camera-container md:sticky md:top-0">
+          <div
+            class="h-full w-full flex flex-col gap-6 py-12 px-6 items-center justify-center webcam-timer"
+          >
+            <video
+              autoplay
+              id="webcam"
+              class="border border-gray-400 rounded-2xl transform scale-x-[-1]"
+            ></video>
+
+            <div class="flex items-center gap-3">
+              <a
+                href="index.html"
+                class="py-2 px-6 bg-black text-white font-bold rounded-full"
+              >
+                Home <i class="fa-solid fa-house ml-3 text-lg"></i>
+              </a>
+              <button
+                class="take-photo-btn py-2 px-6 bg-black text-white font-bold rounded-full"
+              >
+                Take photo <i class="fa-solid fa-camera ml-3 text-lg"></i>
+              </button>
+              <select
+                class="timer-select py-2 px-3 bg-black text-white font-bold rounded-full"
+              >
+                <option value="1">1s</option>
+                <option value="3">3s</option>
+                <option value="5">5s</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div
+          class="h-screen w-[650px] py-12 px-6 pl-12 border-l border-gray-400"
+        >
+          <div class="flex flex-col mb-3 gap-1">
+            <h2 class="photo-count text-2xl font-bold">
+              Selected Photos: 0 / 3
+            </h2>
+            <p class="text-sm text-gray-600">
+              You can take any pictures you want. Simply click
+              <i class="fa-solid fa-check"></i> when you're done, and click
+              <i class="fa-solid fa-x"></i> to delete a picture.
+            </p>
+          </div>
+          <div
+            class="photo-container flex flex-col overflow-y-auto h-[90%] pr-1"
+          ></div>
+          <button
+            class="proceed-btn mb-6 py-2 px-6 bg-black text-white font-bold rounded-full"
+          >
+            Proceed to custom photostrip
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="photobooth.js"></script>
+  </body>
+</html>
