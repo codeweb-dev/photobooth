@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div
+    <!-- <div
       id="transition-overlay"
       class="fixed inset-0 bg-black z-50 transition-transform transform duration-1000"
     >
@@ -36,10 +36,10 @@
           </p>
         </div>
       </div>
-    </div>
-    <main class="h-screen flex items-center justify-center w-full">
-      <div class="flex items-center w-full">
-        <div class="h-screen w-full camera-container sticky top-0">
+    </div> -->
+    <main class="lg:h-screen flex items-center justify-center w-full">
+      <div class="flex items-center w-full flex-col lg:flex-row">
+        <div class="lg:h-screen w-full camera-container lg:sticky lg:top-0">
           <div
             class="h-full w-full flex flex-col gap-6 py-12 px-6 items-center justify-center webcam-timer"
           >
@@ -54,15 +54,17 @@
                 href="index.html"
                 class="py-2 px-6 bg-black text-white font-bold rounded-full"
               >
-                Home <i class="fa-solid fa-house ml-3 text-lg"></i>
+                Home
+                <i class="fa-solid fa-house ml-3 text-lg hidden lg:block"></i>
               </a>
               <button
                 class="take-photo-btn py-2 px-6 bg-black text-white font-bold rounded-full"
               >
-                Take photo <i class="fa-solid fa-camera ml-3 text-lg"></i>
+                Take photo
+                <i class="fa-solid fa-camera ml-3 text-lg hidden lg:block"></i>
               </button>
               <select
-                class="timer-select py-2 px-3 bg-black text-white font-bold rounded-full"
+                class="timer-select py-2 px-1 bg-black text-white font-bold rounded-full"
               >
                 <option value="1">1s</option>
                 <option value="3">3s</option>
@@ -72,14 +74,14 @@
           </div>
         </div>
         <div
-          class="h-screen w-[650px] py-12 px-6 pl-12 border-l border-gray-400"
+          class="lg:h-screen lg:w-[650px] w-full py-12 px-6 lg:pl-12 lg:border-l lg:border-gray-400"
         >
-          <div class="flex flex-col mb-3 gap-1">
+          <div class="flex flex-col mb-3 gap-1 items-center justify-center">
             <h2 class="photo-count text-2xl font-bold">
               Selected Photos: 0 / 3
             </h2>
             <p class="text-sm text-gray-600">
-              You can take any pictures you want. Simply click
+              You can take any pictures you want. Simply the image and click
               <i class="fa-solid fa-check"></i> when you're done, and click
               <i class="fa-solid fa-x"></i> to delete a picture.
             </p>
