@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   selectedPhotos.forEach((src) => {
     const img = document.createElement("img");
     img.src = src;
-    img.classList.add("w-[100px]", "h-[150px]");
+    img.classList.add("w-full", "h-[150px]", "bg-cover", "bg-center");
     photoStrip.appendChild(img);
   });
 
